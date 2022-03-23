@@ -8,7 +8,17 @@ public class Sort {
      * @param nums
      */
     public static void sortTwo(int[] nums) {
+        int temp =0;
+        if (nums[0] > nums[1]) {
+            //Swap the two places.
 
+            //Put the first into temp.
+            temp = nums[0];
+            nums[0] = nums[1];
+            nums[1] = temp;
+            //Put the second into the first.
+
+            //Put the temp into the second.
     }
 
     /**
@@ -19,6 +29,44 @@ public class Sort {
      * @param array2 - A sorted list of numbers that is the size of half the length of the inputArray
      */
     public static void merge(int[] inputArray, int[] array1, int [] array2) {
+      //  int[] inputArray = new int[];
+        int i =0; int j = 0; int k = 0;
+       while(i < array1.length && j < array2.length){
+                if (array1[i] <= array2[j]){
+                    inputArray[k] = array1[i];
+                    i++;
+                } else {
+                    inputArray[k] = array2[j];
+                    j++;
+                }
+                k++;
+
+          }
+       while (i < array1.length){
+           inputArray[k] = array1[i];
+           i++;
+           k++;
+       }
+       while (j < array2.length){
+           inputArray[k] = array2[j];
+           j++;
+           k++;
+       }
+        System.out.println(Arrays.toString(inputArray));
+      }
+        //Grab from both as long as they both have numbers to give.
+        //while there is room in array 1 and 2
+        //if rh wins or lh wins add number to input array
+
+        // move to next on losing array
+        //move to next on input array
+
+        //while room in array 1 add last number to input
+        //Clean out array1
+
+        //while room in array 2 add last number to input
+        //Clean out array2
 
     }
-}
+
+    
